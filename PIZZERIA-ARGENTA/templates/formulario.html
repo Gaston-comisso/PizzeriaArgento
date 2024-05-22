@@ -1,0 +1,61 @@
+{% extends "layout.html"%}
+
+{% block content %}
+<h1>Formulario</h1>
+
+<body>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Telefono</label>
+            <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip02" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltipUsername" class="form-label">Mail</label>
+            <div class="input-group has-validation">
+                <span class="email" id="validationTooltipUsernamePrepend">@</span>
+                <input type="text" class="form-control" id="validationTooltipUsername"
+                    aria-describedby="validationTooltipUsernamePrepend" required>
+                <div class="invalid-tooltip">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 position-relative">
+            <label for="validationTooltip03" class="form-label">Barrio</label>
+            <input type="text" class="form-control" id="validationTooltip03" required>
+            <div class="invalid-tooltip">
+            </div>
+            <div class="col-md-6 position-relative">
+                <label for="validationTooltip03" class="form-label">Calle</label>
+                <input type="text" class="form-control" id="validationTooltip03" required>
+                <div class="invalid-tooltip">
+                </div>
+                <div class="col-md-3 position-relative">
+                    <label for="validationTooltip05" class="form-label">Costo $800</label>
+                    <input type="text" class="form-control" id="validationTooltip05" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid zip.
+                    </div>
+        <div class="col-md-3 position-relative">
+            <label for="validationTooltip05" class="form-label">Comentario</label>
+            <input type="text" class="form-control" id="validationTooltip05" required>
+            <div class="invalid-tooltip">
+                Please provide a valid zip.
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Aceptar</button>
+            <button class="btn btn-primary" type="submit">Cancelar</button>
+        </div>
+    </form>
+</body>
+{% endblock %}
