@@ -44,11 +44,12 @@ def cargarFormulario(): #query
     if  request.method == 'POST':
         telefono = request.form['telefono']
         nombre = request.form['nombre']
-        email= int(request.form['email'])
-        barrio= int(request.form['barrio'])
-        direccion= int(request.form['direccion'])
+        email= request.form['email']
+        barrio= request.form['barrio']
+        direccion= request.form['direccion']
         costo= int(request.form['costo'])
-        comentario= int(request.form['comentario'])      
+        comentario= request.form['comentario']  
+        
         cur = mysql.connection.cursor()    
         
         cur.execute('''INSERT INTO formularios (telefono, nombre, email, barrio, direccion,costo,comentario)
