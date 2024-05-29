@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzArgenta | Inicio</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('path/to/your/pizzeria-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .login-container h2 {
+            color: #D9534F; /* Color rojo para recordar el tomate de las pizzas */
+        }
+        .btn-primary {
+            background-color: #D9534F; /* Color rojo para el botón */
+            border-color: #D9534F;
+        }
+        .btn-primary:hover {
+            background-color: #C9302C;
+            border-color: #C9302C;
+        }
+        .container {
+    text-align: center; /* Centra la imagen horizontalmente dentro del contenedor */
+    margin-top: 20px;
+}
+
+/* Selecciona la imagen específica por su clase */
+.logo {
+    width: 150px; /* Ajusta el ancho de la imagen */
+    height: 150px;
+    border-radius:100%;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/img/logo-pizza.png" alt="logo de pizza" class="logo">
+    </div>
+    <div class="container">
+        <div class="login-container bg-light">
+            <h2 class="text-center mb-4">PizzArgenta</h2>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Ingresar Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Contraseña</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text"></div>
+            </div>
+            <button type="button" class="btn btn-primary w-100">Ingresar</button>
+            <div style="margin-top: 15px; font-size: 0.9em; color: #6c757d; text-align: center;">
+                Acceso exclusivo para Administrador de la página
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2024 PizzArgenta. Todos los derechos reservados.
+    </footer>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

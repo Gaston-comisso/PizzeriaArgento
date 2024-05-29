@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzArgenta | Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #D9534F;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-size: 1.2rem;
+        }
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+        .container h1, .container h2 {
+            color: #D9534F;
+        }
+        .card {
+            border: none;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-title {
+            color: #D9534F;
+        }
+        footer {
+            background-color: #D9534F;
+        }
+        .logo-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">PizzArgenta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ubicacion">Ubicación</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="logo-container">
+        <img src="../static/img/logo-pizza.png" alt="logo de pizza" class="logo">
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Bienvenidos a PizzArgenta</h1>
+        <p class="text-center">La Campeona del Mundo</p>
+
+        <section id="productos" class="mt-5">
+            <h2 class="text-center">Nuestros Productos</h2>
+
+            <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="../static/img/pizzaEscaloneta.png" class="card-img-top" alt="Pizza Scaloneta">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Scaloneta(MENU DEL DIA)</h5>
+                        <p class="card-text">Deliciosa pizza con tomate, mozzarella y albahaca + porción de papas chicas + coca 1.5</p>
+                        <p class="card-text"><strong>$10.000</strong></p>
+                    </div>
+                </div>
+            </div>
+                                <!-- Producto 2 -->
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <img src="../static/img/pizzaEscaloneta2.png" class="card-img-top" alt="Pizza Pepperoni">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pizza Pepperoni</h5>
+                                            <p class="card-text">Pizza con pepperoni, queso mozzarella y salsa de tomate + papas chicas + coca 1.5</p>
+                                            <p class="card-text"><strong>$12.000</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Producto 3 -->
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <img src="../static/img/pizzaEscaloneta3.png" class="card-img-top" alt="Pizza Vegetariana">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pizza Vegetariana</h5>
+                                            <p class="card-text">Pizza con una variedad de vegetales frescos y queso mozzarella + papas veganas + coca 1.5</p>
+                                            <p class="card-text"><strong>$11.000</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col">
+                            
+                            <button 
+                                class="btn btn-success btn-lg"
+                                data-bs-toggle="modal"
+                                data-bs-target="#mi-modal-1"
+                            >
+                            
+                                Encargar pedido para delivery
+                            </button>
+                            <div
+                                class="modal fade"
+                                id="mi-modal-1"
+                                tabindex="-1"
+                                aria-hidden="true"
+                                aria-labelledby="label-modal-1"
+                            >
+                                <!-- Caja de diálogo -->
+                                <div class="modal-dialog">
+                                    <!-- Contenido de la caja -->
+                                    <div class="modal-content">
+                                        <!-- Encabezado de la caja -->
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="label-modal-1">Llenar Formulario</h5>
+                                            <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                        </div>
+                                        <!-- Cuerpo de la caja -->
+                                        <div class="modal-body">
+                                            <!-- Formulario -->
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="telefono" class="form-label">Télefono</label>
+                                                    <input type="text" class="form-control" id="telefono" placeholder="Télefono">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="nombre" class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre ">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="email" class="form-label">Ubicación</label>
+                                                    <input type="text" class="form-control" id="email" placeholder="Email ">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="barrio" class="form-label">Barrio</label>
+                                                    <input type="text" class="form-control" id="barrio" placeholder="Nombre del barrio">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="direccion" class="form-label">Direccion</label>
+                                                    <input type="text" class="form-control" id="direccion" placeholder="dirección">
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <label for="costo" class="form-label">Costo</label>
+                                                    <input type="number" class="form-control" id="costo" placeholder="10.600" readonly>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="comentario" class="form-label">Comentario</label>
+                                                    <input type="text" class="form-control" id="cometario" placeholder="Comentario">
+                                                </div>
+                                    
+                                            </form>
+                                        </div>
+                                        <!-- Pie de página de la caja -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-success">Aceptar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+                            
+        </section>
+
+        <section id="contacto" class="mt-5">
+            <h2 class="text-center">Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+
+        <section id="ubicacion" class="mt-5 text-center">
+            <h2 class="text-center">Nuestra Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.357980223293!2d-68.839194924935!3d-32.88870226896319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09188a6c388d%3A0xd99a6d2463f0317f!2sPizzeria%20Capri!5e0!3m2!1ses-419!2sar!4v1716967256526!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2024 PizzArgenta. Todos los derechos reservados.
+    </footer>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
