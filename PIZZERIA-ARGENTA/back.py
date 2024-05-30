@@ -47,7 +47,7 @@ def cargarFormulario(): #query
         email= request.form['email']
         barrio= request.form['barrio']
         direccion= request.form['direccion']
-        costo= int(request.form['costo'])
+        costo= 10600 #lo dejo con un valor fijo ya que en el html 'cliente' el valor es fijo
         comentario= request.form['comentario']  
         
         cur = mysql.connection.cursor()    

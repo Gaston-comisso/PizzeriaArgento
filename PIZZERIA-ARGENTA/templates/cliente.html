@@ -155,26 +155,26 @@
                                         <!-- Cuerpo de la caja -->
                                         <div class="modal-body">
                                             <!-- Formulario -->
-                                            <form>
+                                            <form action="/cargarFormulario" method="POST">
                                                 <div class="mb-3">
                                                     <label for="telefono" class="form-label">Télefono</label>
-                                                    <input type="text" class="form-control" id="telefono" placeholder="Télefono">
+                                                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Télefono">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nombre" class="form-label">Nombre</label>
-                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre ">
+                                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre ">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="email" class="form-label">Ubicación</label>
-                                                    <input type="text" class="form-control" id="email" placeholder="Email ">
+                                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email ">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="barrio" class="form-label">Barrio</label>
-                                                    <input type="text" class="form-control" id="barrio" placeholder="Nombre del barrio">
+                                                    <input type="text" class="form-control" id="barrio" name="barrio" placeholder="Nombre del barrio">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="direccion" class="form-label">Direccion</label>
-                                                    <input type="text" class="form-control" id="direccion" placeholder="dirección">
+                                                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="dirección">
                                                 </div>
                                                 
                                                 <div class="mb-3">
@@ -183,7 +183,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="comentario" class="form-label">Comentario</label>
-                                                    <input type="text" class="form-control" id="cometario" placeholder="Comentario">
+                                                    <input type="text" class="form-control" id="cometario" id="comentario" placeholder="Comentario">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="metodo-pago" class="form-label">Método de Pago</label>
