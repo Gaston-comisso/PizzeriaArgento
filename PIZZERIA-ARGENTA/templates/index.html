@@ -51,20 +51,23 @@
     </div>
     <div class="container">
         <div class="login-container bg-light">
-            <h2 class="text-center mb-4">PizzArgenta</h2>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Ingresar Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword5" class="form-label">Contraseña</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text"></div>
-            </div>
-            <button type="button" class="btn btn-primary w-100">Ingresar</button>
-            <div style="margin-top: 15px; font-size: 0.9em; color: #6c757d; text-align: center;">
-                Acceso exclusivo para Administrador de la página
-            </div>
+            <form action="/procesar_login" method="POST">
+                <h2 class="text-center mb-4">PizzArgenta</h2>
+                {% if error %}
+                {{error}}
+                {% endif %}
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-control">Ingresar Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword5" class="form-label" >Contraseña</label>
+                    <input type="password" id="inputPassword"name="Password" class="form-control" aria-describedby="passwordHelpBlock" >
+                    <div id="passwordHelpBlock" class="form-text" ></div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+
+            </form>
         </div>
     </div>
 

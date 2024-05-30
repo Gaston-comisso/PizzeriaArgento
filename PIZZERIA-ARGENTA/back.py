@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 from flask_mysqldb import MySQL, MySQLdb
+from flask_session import Session
 from dotenv import load_dotenv
 import os
 
@@ -29,8 +30,22 @@ def cliente():
 def admin():
     return render_template("paginaadmin.html")
 
+#ruta para recibir los datos del login
+@app.route('/procesar_login', methods=['POST']) 
+def login():
+    if  request.method == 'POST':
+        email = request.form['email']
+        password = request.form['Password']
+        cur = mysql.connection.cursor()    
+        cur.execute('SELECT nombre, contraseña FROM admins WHERE email = %s AND contraseña = %s', (email, password))
 
-
+        logueo =cur.fetchone()
+    if logueo:
+            session['logeado'] = True
+            
+            return render_template('paginaadmin.html')
+    else:
+            return render_template('index.html', error='Usuario o contraseña incorrectos')
 
 #ruta para recibir el formulario
 @app.route('/cargarFormulario', methods=['POST'])
@@ -56,4 +71,5 @@ def cargarFormulario(): #query
         return render_template('cliente.html') #lo dirijimos a cliente
 
 if __name__=="__main__":
+    app.secret_key='llave secreta'
     app.run(debug=True)
