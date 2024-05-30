@@ -19,23 +19,17 @@ mysql = MySQL(app)
 #rutas
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
-@app.route("/menu")
-def menu():
-    return render_template("menu.html")
+@app.route("/inicio")
+def cliente():
+    return render_template("cliente.html")
 
-@app.route("/registro")
-def registro():
-    return render_template("register.html")
+@app.route("/admin")
+def admin():
+    return render_template("paginaadmin.html")
 
-@app.route("/pedidos")
-def pedidos():
-    return render_template("pedidos.html")
 
-@app.route("/formulario")
-def formulario():
-    return render_template("formulario.html")
 
 
 #ruta para recibir el formulario
@@ -59,7 +53,7 @@ def cargarFormulario(): #query
         mysql.connection.commit()
         
         
-        return render_template('admin.html') #faltaria agregar bien el template al que se debe redirigir
+        return render_template('cliente.html') #lo dirijimos a cliente
 
 if __name__=="__main__":
     app.run(debug=True)
