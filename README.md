@@ -7,3 +7,6 @@ Vamos a trabajar con 3 archivos html, hay que verificar usuario en index.html pa
 Hay que hacer las verificaciones para cuando se llena el formulario con el mensaje "Pedido confirmado"
 
 -sigue faltando las conexiones de ruta por medio de back.py, y hacer las verificaciones para cuando se llena el formulario con el mensaje "Pedido confirmado"
+
+-Ya confirgure las rutas, falta conectarlas, hay que configurar en el back.py solamente la parte del admin y cuando sea el usuario y la contraseña correcta ingrese a paginaadmin.html
+
