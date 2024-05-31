@@ -28,7 +28,12 @@ def cliente():
 
 @app.route("/admin")
 def admin():
-    return render_template("paginaadmin.html")
+    cur = mysql.connection.cursor() 
+    cur.execute('SELECT * FROM formularios')
+    forms = cur.fetchall()
+
+    cur.close()
+    return render_template("paginaadmin.html", forms = forms)
 
 #ruta para recibir los datos del login
 @app.route('/procesar_login', methods=['POST']) 
