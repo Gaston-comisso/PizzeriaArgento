@@ -18,11 +18,11 @@ mysql = MySQL(app)
 
 
 #rutas
-@app.route("/")
+@app.route("/login")
 def home():
     return render_template("index.html")
 
-@app.route("/inicio")
+@app.route("/")
 def cliente():
     return render_template("cliente.html")
 
