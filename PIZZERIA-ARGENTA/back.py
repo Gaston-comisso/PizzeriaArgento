@@ -68,7 +68,7 @@ def cargarFormulario(): #query
         mysql.connection.commit()
         
         
-        return render_template('cliente.html') #lo dirijimos a cliente
+        return render_template('cliente.html', mensaje= "¡Formulario enviado con éxito! ") #lo dirijimos a cliente
 
 if __name__=="__main__":
     app.secret_key='llave secreta'
