@@ -47,8 +47,12 @@ def login():
         logueo =cur.fetchone()
     if logueo:
             session['logeado'] = True
-            
-            return render_template('paginaadmin.html')
+            cur = mysql.connection.cursor() 
+            cur.execute('SELECT * FROM formularios')
+            forms = cur.fetchall()
+
+            cur.close()
+            return render_template('paginaadmin.html', forms = forms)
     else:
             return render_template('index.html', error='Usuario o contraseña incorrectos')
 
